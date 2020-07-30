@@ -3,7 +3,9 @@
 
 <h2>Restaurant Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.PriceRange): @Html.DisplayFor(model => model.PriceRange)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>
 
 <ul>
 @if (@Model.Cuisines.Count == 0)
@@ -13,7 +15,7 @@
 
 @foreach (Cuisine cuisine in @Model.Cuisines)
 {
-  <li>Cuisines($): @cuisines.Money</li>
+  <li>Cuisines($): @cuisines.foodtype</li>
 }
 </ul>
 

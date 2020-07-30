@@ -32,8 +32,10 @@ __
 
 | Behavior    | Input | Output |
 | :---------- | ----- | -----: |
-| behavior 1 |  |  |
-| behavior 2 |  |  |
+| Create a new Restaurant | `add`new restaurant "Billy's grill" | `details` "Billy's grill" |
+| Edit a Restaurant | `edit` name, description, and/or "Billys grill, BBQ grill spot, $$" to "maggy's grill"  | `details displayed` "maggys's grill, BBQ gril spot, $$" |
+| Deleted Restaurant | `delete` "maggy's grill" | `details` no display |
+| Create new Restaurant | `create` "Phil's Cold cut Sandwiches, Best sandwhiches in the city, $" | `details` "Phil's Cold cut Sandwiches, Best sandwhiches in the city, $" |
 
 
 

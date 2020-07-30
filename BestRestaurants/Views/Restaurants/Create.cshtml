@@ -9,6 +9,10 @@
 {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
+    @Html.LableFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description)
+    @Html.LabelFor(model => model.Pricerange)
+    @Html.TextBoxFor(model => model.Pricerange)
     <input type="submit" value="Add new restaurant" />
 }
 <p>@Html.ActionLink("Show all Restaurant", "Index")</p>

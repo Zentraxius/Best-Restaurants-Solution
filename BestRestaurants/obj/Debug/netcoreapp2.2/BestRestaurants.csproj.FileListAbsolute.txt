@@ -1,0 +1,6 @@
+/Users/iangregg/Desktop/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.csprojAssemblyReference.cache
+/Users/iangregg/Desktop/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.csproj.CoreCompileInputs.cache
+/Users/iangregg/Desktop/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.RazorAssemblyInfo.cache
+/Users/iangregg/Desktop/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.RazorAssemblyInfo.cs
+/Users/iangregg/Desktop/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.AssemblyInfoInputs.cache
+/Users/iangregg/Desktop/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.AssemblyInfo.cs

@@ -10,8 +10,8 @@ namespace BestRestaurant.Models
     }
     public int pricerange {get; set;}
     public int restaurantId { get; set;}
-    public var name { get; set;}
-    public var description {get; set;}
+    public char name { get; set;}
+    public char description {get; set;}
     public virtual ICollection<Cuisine> Cuisines {get;set;}
   }
 }
