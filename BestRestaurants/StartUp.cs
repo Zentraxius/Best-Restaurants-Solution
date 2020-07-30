@@ -1,13 +1,51 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AssNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NonProfit.Models;
+using BestRestaurants.Models;
 
-// best_restaurants |db|
+namespace BestRestaurants
+{
+  public class Startup
+  {
+    public Startup(IHostingEnvironment env)
+    {
+      var builder = new ConfigurationBuilder()
+          .SetBasePath(env.ContentRootPath)
+          .AddJsonFile("appsettings.json");
+      Configuration = builder.Build();
+    }
 
-// |col| cuisine | cuisineId | foodtype | restaurantId
+    public IConfigurationRoot Configuration { get; set; }
 
-// |col| restaurant | restaurantId | name | description | pricerange
+    public void ConfigureServices(IServiceCollection services)
+    {
+      services.AddMvc();
+
+      services.AddEntityFrameworkMySql()
+        .AddDbContext<BestRestaurantContext>(options => options
+        .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
+    }
+
+    public void Configure(IApplicationBuilder app)
+    {
+      app.UseStaticFiles();
+
+      app.UseDeveloperExceptionPage();
+
+      app.UseMvc(routes =>
+      {
+        routes.MapRoute(
+          name: "default",
+          template: "{controller=Home}/{action=Index}/{id?}");
+      });
+
+      app.Run(async (context) =>
+      {
+        await context.Response.WriteAsync("Error has occured upon the last entry. Please contact the developer.");
+      });
+    }
+  }
+}
